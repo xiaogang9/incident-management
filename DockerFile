@@ -1,0 +1,6 @@
+
+# Use OpenJDK 17 as the base image
+FROM openjdk:17-jdk-slim
+VOLUME /tmp
+COPY target/IncidentMgr-1.0.0.jar app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
