@@ -21,3 +21,6 @@ Incident Entity Design
 
 ![image](https://github.com/user-attachments/assets/6d6d8c57-d710-4cac-a4ac-83f61bd4a707)
 
+![image](https://github.com/user-attachments/assets/6ef02f60-6713-4ebf-981b-2c3ecdc18639)
+
+
