@@ -5,6 +5,8 @@ import javax.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Timestamp;
+
 @Entity
 @Getter
 @Setter
@@ -19,28 +21,37 @@ public class Incident {
 
     private String description;
 
-    // Getters and Setters
-    public Long getId(){
-        return id;
+    private IncidentLevel level;
+
+    private IncidentStatus status;
+
+    private Long submittedBy;
+
+    private Long assignedTo;
+
+    private Long projectId;
+
+    private Long DomainId;
+
+    private Timestamp createdAt;
+
+    private Timestamp updatedAt;
+
+    enum IncidentLevel { // P0 is the highest priority of incident
+        P0, P1, P2, P3, P4
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    enum IncidentStatus { // here just demo some basic status of the incident
+        CREATED,
+        ASSIGNED,
+        RESOLVED,
+        BACKLOGGED,
+        OBSOLETED,
     }
 }
+
+
+
+
+
+
