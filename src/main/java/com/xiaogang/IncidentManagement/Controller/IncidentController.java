@@ -11,6 +11,7 @@ import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/incidents")
+@CrossOrigin(origins = "http://localhost:3000") // Allow requests from localhost:3000
 public class IncidentController {
     @Autowired
     private IncidentService service;
